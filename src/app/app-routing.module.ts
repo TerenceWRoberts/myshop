@@ -8,19 +8,15 @@ import { DemoComponent } from './components/demo/demo.component';
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'home/main',
     pathMatch: 'full'
   },
-  // {
-  //   path: '',
-  //   component: DemoComponent
-  // },
   {
-    path: 'home',
+    path: '',
     component: MainComponent,
     children: [
       {
-        path: '',
+        path: 'home',
         loadChildren: () => import('./components/shop/shop.module').then(m => m.ShopModule)
       },
       {
@@ -36,7 +32,7 @@ const appRoutes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'home/one'
+    redirectTo: 'home/main'
   }
 ];
 

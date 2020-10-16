@@ -11,7 +11,7 @@ import { HomeFiveComponent } from './home-five/home-five.component';
 
 // Routes
 const routes: Routes = [
-  { path: '', component: HomeThreeComponent },
+  { path: 'main', component: HomeThreeComponent },
   { path: 'one', component: HomeComponent },
   { path: 'two', component: HomeTwoComponent },
   { path: 'three', component: HomeThreeComponent },
@@ -19,8 +19,6 @@ const routes: Routes = [
   { path: 'five', component: HomeFiveComponent },
   { path: 'products/:category', component: ProductLeftSidebarComponent },
   { path: 'product/:id', component: ProductDetailsComponent }
-
-
 ];
 
 
